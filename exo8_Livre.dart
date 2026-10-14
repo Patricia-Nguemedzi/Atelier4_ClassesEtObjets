@@ -21,12 +21,28 @@ class Livre {
   }
 }
 
+class Roman extends Livre {
+  String genre;
+
+  Roman(String titre, String auteur, this.genre) : super(titre, auteur);
+
+  @override
+  void afficherInfos() {
+    print("Titre : $titre, Auteur : $auteur, Genre : $genre, Pages : $pages");
+  }
+}
+
 void main() {
-Livre livre1 = Livre("1984", "George Orwell");
-Livre livre2 = Livre("Le Meilleur des mondes", "Aldous Huxley");
+  Livre livre1 = Livre("Le petit prince", "Antoine de Saint-Exupéry");
+  Livre livre2 = Livre("Le Meilleur des mondes", "Aldous Huxley");
+  
+  Roman roman1 = Roman("Sous la cendre", "Jean-Paul Sartre", "Philosophique");
+  Roman roman2 = Roman("entre les lignes", "Margaret Atwood", "Science-fiction");
 
   livre1.afficherInfos();
   livre2.afficherInfos();
-
+  roman1.afficherInfos();
+  roman2.afficherInfos();
+ 
   Livre.afficherTotal();
 }
