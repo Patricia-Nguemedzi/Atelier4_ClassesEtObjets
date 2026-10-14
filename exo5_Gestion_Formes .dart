@@ -29,3 +29,18 @@ abstract class Forme {
      return longueur * largeur;
    }
  }
+
+ main() {
+   List<Forme> formes = [
+     Cercle(10),
+     Rectangle(12, 36),
+   ];
+ 
+   for (var forme in formes) {
+     forme.afficherMessage();
+
+     String nomForme = forme is Cercle ? "Cercle" : "Rectangle";
+     ///print("Type de forme: $nomForme");
+     print("Aire $nomForme : ${forme.calculAire(). toStringAsFixed(2)}\n");
+   }
+ }
