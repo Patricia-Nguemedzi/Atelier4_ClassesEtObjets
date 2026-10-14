@@ -14,3 +14,11 @@ class Point {
   }
 
 }
+
+void main() {
+  var pt = Point(2, 5);
+  pt.display(); // Affiche: Point(2, 5)
+
+  pt.move(-1, 3);
+  pt.display(); // Affiche: Point(3, 4)
+}
