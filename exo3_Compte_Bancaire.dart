@@ -12,3 +12,10 @@ class Compte {
     }
   }
 }
+
+void main() {
+  var compte = Compte('CPT-001');
+  compte.depot(150.00);
+  compte.depot(-50.00);
+  print(compte.solde);
+}
