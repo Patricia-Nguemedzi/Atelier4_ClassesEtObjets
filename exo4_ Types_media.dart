@@ -29,3 +29,16 @@ class Film extends Media {
     print("ceci est un film : $titre d'une durée de : $dureeMinutes minutes");
   }
 }
+
+void main() {
+  List<Media> catalogue = [
+    Livre("The Lean Startup", "Eric Ries"),
+    Film("The dropout", 50),
+    Livre("l'obstacle est le chemin", "Ryan Holiday"),
+    Film("l'art de la victoire", 120),
+  ];
+
+ for (var media in catalogue) {
+    media.afficherType();
+  }
+}
