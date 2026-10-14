@@ -40,7 +40,6 @@ abstract class Forme {
      forme.afficherMessage();
 
      String nomForme = forme is Cercle ? "Cercle" : "Rectangle";
-     ///print("Type de forme: $nomForme");
      print("Aire $nomForme : ${forme.calculAire(). toStringAsFixed(2)}\n");
    }
  }
